@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
 import Favorites from './components/Favorites'
 import Home from './components/Home'
-import Individual from './components/Individual'
+import IdRecipe from './components/IdRecipe'
 import Login from './components/Login'
 import Nav from './components/Nav'
 import Recipes from './components/Recipes'
@@ -39,7 +39,7 @@ function App() {
           <Routes>
             <Route path="/favorites" element={<Favorites/>}></Route>
             <Route path="/" element={<Home/>}></Route>
-            <Route path="/:id" element={<Individual/>}></Route>
+            <Route path="/recipe/:id" element={<IdRecipe/>}></Route>
             <Route path="/login" element={<Login/>}></Route>
             <Route path="/recipe" element={<Recipes/>}></Route>
             <Route path="/register" element={<Register/>}></Route>
