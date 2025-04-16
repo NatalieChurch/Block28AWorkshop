@@ -21,6 +21,7 @@ function App() {
       setRecipes(data)
     }
     getRecipes();
+    console.log("First UseEffect")
   })
 
   return (
@@ -37,11 +38,11 @@ function App() {
 
         <div id="main-section">
           <Routes>
-            <Route path="/favorites" element={<Favorites/>}></Route>
+            <Route path="/favorites" element={<Favorites recipes={recipes} setRecipes={setRecipes} favRecipes={favRecipes} setFavRecipes={setFavRecipes} />}></Route>
             <Route path="/" element={<Home/>}></Route>
-            <Route path="/recipe/:id" element={<IdRecipe/>}></Route>
+            <Route path="/recipe/:id" element={<IdRecipe recipes={recipes} setRecipes={setRecipes} favRecipes={favRecipes} setFavRecipes={setFavRecipes} />}></Route>
             <Route path="/login" element={<Login/>}></Route>
-            <Route path="/recipe" element={<Recipes/>}></Route>
+            <Route path="/recipe" element={<Recipes recipes={recipes} setRecipes={setRecipes} favRecipes={favRecipes} setFavRecipes={setFavRecipes} />}></Route>
             <Route path="/register" element={<Register/>}></Route>
           </Routes>
         </div>
