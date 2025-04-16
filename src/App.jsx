@@ -30,20 +30,20 @@ function App() {
 
         <div id="navbar" style={{display:"flex", justifyContent:"space-between"}}>
           <Link to="/" style={{color:"black"}}>Home</Link>
-          <Link to="/recipe" style={{color:"black"}}>Recipes</Link>
-          <Link to="/favorites" style={{color:"black"}}>Favorites</Link>
-          <Link to="/login" style={{color:"black"}}>Login</Link>
-          <Link to="/register" style={{color:"black"}}>Register</Link>
+          <Link to="/api/recipes" style={{color:"black"}}>Recipes</Link>
+          <Link to="/api/favorites" style={{color:"black"}}>Favorites</Link>
+          <Link to="/api/auth/login" style={{color:"black"}}>Login</Link>
+          <Link to="/api/auth/register" style={{color:"black"}}>Register</Link>
         </div>
 
         <div id="main-section">
           <Routes>
-            <Route path="/favorites" element={<Favorites recipes={recipes} setRecipes={setRecipes} favRecipes={favRecipes} setFavRecipes={setFavRecipes} />}></Route>
+            <Route path="/api/favorites" element={<Favorites recipes={recipes} setRecipes={setRecipes} favRecipes={favRecipes} setFavRecipes={setFavRecipes} />}></Route>
             <Route path="/" element={<Home/>}></Route>
-            <Route path="/recipe/:id" element={<IdRecipe recipes={recipes} setRecipes={setRecipes} favRecipes={favRecipes} setFavRecipes={setFavRecipes} />}></Route>
-            <Route path="/login" element={<Login/>}></Route>
-            <Route path="/recipe" element={<Recipes recipes={recipes} setRecipes={setRecipes} favRecipes={favRecipes} setFavRecipes={setFavRecipes} />}></Route>
-            <Route path="/register" element={<Register/>}></Route>
+            <Route path="/api/recipes/:id" element={<IdRecipe recipes={recipes} setRecipes={setRecipes} favRecipes={favRecipes} setFavRecipes={setFavRecipes} />}></Route>
+            <Route path="/api/auth/login" element={<Login/>}></Route>
+            <Route path="/api/recipes" element={<Recipes recipes={recipes} setRecipes={setRecipes} favRecipes={favRecipes} setFavRecipes={setFavRecipes} />}></Route>
+            <Route path="/api/auth/register" element={<Register/>}></Route>
           </Routes>
         </div>
 
