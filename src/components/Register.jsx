@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function Register () {
+function Register ({setToken}) {
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -25,6 +25,7 @@ async function handleSubmit(event) {
             const result = await response.json()
             console.log(result);
             setToken(result.token);
+            localStorage.setItem("token", result.token)
 
     } catch (error){
         setError(error.message)
@@ -46,17 +47,16 @@ useEffect(()=>{
 
 return(
     <div>
-        <h2>Sign up now!</h2>
+        <h2>Sign Up Below</h2>
         {error && <p>{error}</p>}
         <form onSubmit={handleSubmit}>
             <label>
                 <input value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Enter username here" minLength={7} />
             </label>
             <label>
-                <p>Password: </p>
-                <input value={password} onChange={(e) => setPassword(e.target.value)} />
+                <input value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter password here"/>
             </label>
-            <button>Submit!</button>
+            <button>Register!</button>
         </form>
     </div>);
 }

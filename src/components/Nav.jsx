@@ -2,11 +2,11 @@ function Nav () {
 
     return (
         <nav>
-            <Link to="/" style={{color:"black"}}>Home</Link>
-            <Link to="/recipe" style={{color:"black"}}>Recipes</Link>
-            <Link to="/favorites" style={{color:"black"}}>Favorites</Link>
-            <Link to="/login" style={{color:"black"}}>Login</Link>
-            <Link to="/register" style={{color:"black"}}>Register</Link>
+            <Link to="/" style={{color:"white"}}>Home</Link>
+            <Link to="/recipe" style={{color:"white"}}>Recipes</Link>
+            <Link to="/favorites" style={{color:"white"}}>Favorites</Link>
+            <Link to="/login" style={{color:"white"}}>Login</Link>
+            <Link to="/register" style={{color:"white"}}>Register</Link>
         </nav>
     )
 
