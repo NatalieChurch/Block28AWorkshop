@@ -31,6 +31,19 @@ async function handleSubmit(event) {
     }
 }
 
+
+
+useEffect(()=>{
+    if(username, password){
+        localStorage.setItem("Username", username);
+        localStorage.setItem("Password", password);
+    } else {
+
+    }
+})
+
+
+
 return(
     <div>
         <h2>Sign up now!</h2>
