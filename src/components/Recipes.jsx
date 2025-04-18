@@ -13,7 +13,7 @@ function Recipes ({recipes, setRecipes, favRecipes, setFavRecipes, token}) {
         <>
         { recipes &&
             recipes.map((recipes) => 
-                <div key={recipes.idMeal} id="recipeCard">
+                <div key={recipes.idMeal} id="recipeCard" style={{boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.5)"}}>
                     <h1>{recipes.strMeal}</h1>
                     <img src={recipes.strMealThumb}></img>
                     <h2>{recipes.strCategory}</h2>
