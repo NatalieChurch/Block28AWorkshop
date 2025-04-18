@@ -13,9 +13,9 @@ function Recipes ({recipes, setRecipes, favRecipes, setFavRecipes, token}) {
         <>
         { recipes &&
             recipes.map((recipes) => 
-                <div key={recipes.idMeal}>
+                <div key={recipes.idMeal} id="recipeCard">
                     <h1>{recipes.strMeal}</h1>
-                    <img src={recipes.strMealThumb} style={{width:"200px"}}></img>
+                    <img src={recipes.strMealThumb}></img>
                     <h2>{recipes.strCategory}</h2>
                     <h2>{recipes.strArea}</h2>
                     <h3>{recipes.strTags}</h3>

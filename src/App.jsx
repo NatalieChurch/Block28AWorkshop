@@ -31,11 +31,11 @@ function App() {
      <div>
 
         <div id="navbar" style={{display:"flex", justifyContent:"space-between"}}>
-          <Link to="/" >Home</Link>
-          <Link to="/recipes" >Recipes</Link>
-          <Link to="/favorites" >Favorites</Link>
-          <Link to="/auth/login" >Login</Link>
-          <Link to="/auth/register">Register</Link>
+          <Link to="/" style={{color:'black'}}>Home</Link>
+          <Link to="/recipes" style={{color:'black'}}>Recipes</Link>
+          <Link to="/favorites" style={{color:'black'}}>Favorites</Link>
+          <Link to="/auth/login" style={{color:'black'}}>Login</Link>
+          <Link to="/auth/register"style={{color:'black'}}>Register</Link>
         </div>
 
         <div id="main-section">
