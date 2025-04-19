@@ -48,6 +48,12 @@ useEffect(()=>{
 return(
     <div>
         <h2>Sign Up Below</h2>
+        <hr style={{
+                backgroundColor: "rgb(101, 126, 98)",
+                height: "2px",
+                border: "none",
+                margin: "2px 0 20px 0"
+            }} />
         {error && <p>{error}</p>}
         <form onSubmit={handleSubmit}>
             <label>
